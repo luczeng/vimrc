@@ -1,13 +1,22 @@
-" Key bindings
+"==============================================
+"" Key bindings
+"==============================================
+" General
 inoremap jj <ESC>
 let mapleader=" "                           " change this for us keyboards
+inoremap jj <ESC>                           " select whole file
+
+" Moving around
 map <Leader>h :wincmd h<CR>                 " these are to jump from tabs to tabs easily
 map <Leader>j :wincmd j<CR>
 map <Leader>k :wincmd k<CR>
 map <Leader>l :wincmd l<CR>
-inoremap jj <ESC>                           " select whole file
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
+
+" Copying, selecting
+nnoremap Y v$y
+nnoremap vA ggVG$
 
 "==============================================
 "" Plugins
@@ -39,6 +48,9 @@ set relativenumber
 set showmatch                               " shows matching part of bracket pairs (), [], {}
 set ruler
 
+" Line width
+set textwidth=120
+
 " Indent
 set tabstop=4                               " 4 whitespaces for tabs visual presentation
 set shiftwidth=4                            " shift lines by 4 spaces
@@ -64,7 +76,7 @@ nnoremap <Leader> :noh<cr>                  " to disable hightlights
 "=============================================
 
 " Format
-let g:pymode_options_max_line_length = 120
+let g:pymode_options_max_line_length = 120  " btw how does this interact with textwidth?
 
 " Linter
 let g:pymode_lint_unmodified = 0            " check code on every write (change if big files?)
