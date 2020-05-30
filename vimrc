@@ -31,6 +31,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Valloric/YouCompleteMe'
     Plug 'scrooloose/nerdcommenter'         " Comment stuff out
     Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' } "python support
+    Plug 'iamcco/markdown-preview.vim'      " type MarkdownPreview to view md
 
     "------------------------=== Others ===---------------------"
     Plug 'jnurmine/Zenburn'
@@ -109,7 +110,10 @@ let g:pymode_syntax_docstrings=g:pymode_syntax_all
 "============================================
 "" NERDTree settings
 "============================================
+
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']     " Ignore files in NERDTree
-nnoremap <Leader>f :NERDTreeToggle<Enter>
+nnoremap <Leader>f :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>F : NERDTreeFind<CR>
 let NERDTreeMinimalUI = 1                   " Disable help
 let NERDTreeDirArrows = 1
+
