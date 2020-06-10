@@ -49,6 +49,9 @@ set relativenumber
 set showmatch                               " shows matching part of bracket pairs (), [], {}
 set ruler
 
+" Backups (should I add undo dir?)
+set noswapfile
+
 " Line width
 set textwidth=120
 
@@ -117,3 +120,7 @@ nnoremap <silent> <Leader>F : NERDTreeFind<CR>
 let NERDTreeMinimalUI = 1                   " Disable help
 let NERDTreeDirArrows = 1
 
+"============================================
+"" Ctrl p settings
+"============================================
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard'] " ignore files in .gitignore
