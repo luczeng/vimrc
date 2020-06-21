@@ -71,8 +71,10 @@ set enc=utf-8	                            " utf-8 by default
 "==============================================
 "" Search settings
 "==============================================
-set incsearch	                            " incremental search
-set hlsearch	                            " highlight search results
+set incsearch                               " incremental search
+set hlsearch                                " highlight search results
+set ignorecase
+set smartcase                               " if the search pattern contains upper letter, use it
 nnoremap <Leader> :noh<cr>                  " to disable hightlights
 
 "=============================================
