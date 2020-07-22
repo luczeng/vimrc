@@ -28,7 +28,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
 
     "-----------------=== Languages support ===-----------------"
-    Plug 'Valloric/YouCompleteMe'
+    Plug 'Valloric/YouCompleteMe'           " READ INSTALL INSTRUCTION ON GITHUB PAGE
     Plug 'scrooloose/nerdcommenter'         " Comment stuff out
     Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' } "python support
     Plug 'iamcco/markdown-preview.vim'      " type MarkdownPreview to view md
@@ -61,6 +61,9 @@ set shiftwidth=4                            " shift lines by 4 spaces
 set smarttab                                " set tabs for a shifttabs logic
 set expandtab                               " expand tabs into spaces
 set autoindent                              " indent when moving to the next line while writing code
+
+" Enable backspace key
+set backspace=indent,eol,start
 
 " Color scheme
 colors zenburn
