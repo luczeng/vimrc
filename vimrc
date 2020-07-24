@@ -91,10 +91,17 @@ let g:pymode_options_max_line_length = 120  " btw how does this interact with te
 let g:pymode_lint_unmodified = 0            " check code on every write (change if big files?)
 
 " Definitions
-let g:pymode_rope_goto_definition_bind = '<C-c>g'
+" Rope
+let g:pymode_rope = 1
+let g:pymode_run_bind = '<leader>r'
+let g:pymode_rope_goto_definition_bind = '<leader>pg'
 let g:pymode_rope_goto_definition_cmd = 'new'
+let g:pymode_rope_organize_imports_bind = '<leader>pro'
+let g:pymode_rope_show_doc_bind = '<leader>pd'
+let g:pymode_rope_rename_bind = '<leader>prr'
 
-let g:pymode_syntax= 1
+" Syntax and display info
+let g:pymode_syntax= 1                                              " Turn on pymode's syntax
 let g:pymode_syntax_slow_sync = 1
 let g:pymode_syntax_all = 1
 let g:pymode_syntax_print_as_function = 0
@@ -104,7 +111,7 @@ let g:pymode_syntax_highlight_async_await=g:pymode_syntax_all
 let g:pymode_syntax_highlight_equal_operator=g:pymode_syntax_all
 let g:pymode_syntax_highlight_stars_operator=g:pymode_syntax_all
 let g:pymode_syntax_highlight_self=g:pymode_syntax_all
-let g:pymode_syntax_indent_errors=g:pymode_syntax_all
+let g:pymode_syntax_indent_errors=g:pymode_syntax_all               " Highlight indent errors
 let g:pymode_syntax_string_formatting=g:pymode_syntax_all
 let g:pymode_syntax_space_errors=g:pymode_syntax_all
 let g:pymode_syntax_string_format=g:pymode_syntax_all
