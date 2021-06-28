@@ -32,6 +32,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdcommenter'         " Comment stuff out
     Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' } "python support
     Plug 'iamcco/markdown-preview.vim'      " type MarkdownPreview to view md
+    Plug 'chrisbra/csv.vim'
 
     "------------------------=== Others ===---------------------"
     Plug 'jnurmine/Zenburn'
