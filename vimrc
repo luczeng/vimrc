@@ -33,6 +33,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' } "python support
     Plug 'iamcco/markdown-preview.vim'      " type MarkdownPreview to view md
     Plug 'chrisbra/csv.vim'
+    
+    "-----------------=== Git support ===-----------------"
+    Plug 'tpope/vim-fugitive'
 
     "------------------------=== Others ===---------------------"
     Plug 'jnurmine/Zenburn'
@@ -122,6 +125,9 @@ let g:pymode_syntax_builtin_objs=g:pymode_syntax_all
 let g:pymode_syntax_builtin_types=g:pymode_syntax_all
 let g:pymode_syntax_highlight_exceptions=g:pymode_syntax_all
 let g:pymode_syntax_docstrings=g:pymode_syntax_all
+
+" Documentation
+let g:pymode_doc = 0
 
 "============================================
 "" NERDTree settings
