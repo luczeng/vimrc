@@ -6,6 +6,13 @@ Relies on python-mode to navigate python projects. Relies on YCM for autocomplet
 
 Don't hesitate to use it/comment.
 
+# Installation
+Install should be automatic for all plugins except YouCompleteMe. Run the follow:
+`apt install build-essential cmake vim-nox python3-dev`
+`apt install mono-complete golang nodejs default-jdk npm`
+`cd ~/.vim/plugged/YouCompleteMe
+python3 install.py --all`
+
 # Commands
 ## Resolving git conflicts
 - `Gvdiffsplit!` (! for 3 way merge)
