@@ -52,6 +52,7 @@ call plug#end()
 set relativenumber
 set showmatch                               " shows matching part of bracket pairs (), [], {}
 set ruler
+set shortmess-=S                            " shows number of count when searching (and also other things?)
 
 " Backups (should I add undo dir?)
 set noswapfile
