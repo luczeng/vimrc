@@ -43,8 +43,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'iamcco/markdown-preview.vim'      " type MarkdownPreview to view md
     Plug 'chrisbra/csv.vim'
     
-    "-----------------=== Git support ===-----------------"
+    "-----------------=== Git support ===-----------------------"
     Plug 'tpope/vim-fugitive'
+
+    "-----------------=== Formats ===---------------------------"
+    Plug 'elzr/vim-json'
 
     "------------------------=== Others ===---------------------"
     Plug 'jnurmine/Zenburn'
