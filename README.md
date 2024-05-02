@@ -2,7 +2,9 @@
 My personal vim setup.  
 
 Good for python, changes quite often as I'm experimenting a lot.   
-Relies on python-mode to navigate python projects. Relies on YCM for autocompletion. Colorscheme: Zenburn, low contrast and relaxing colors.
+Relies on YCM for autocompletion and navigation. ALE for linters and fixers.  
+
+Colorscheme: Zenburn, low contrast and relaxing colors.
 
 Don't hesitate to use it/comment.
 

@@ -39,9 +39,9 @@ call plug#begin('~/.vim/plugged')
     "-----------------=== Languages support ===-----------------"
     Plug 'Valloric/YouCompleteMe'           " READ INSTALL INSTRUCTION ON GITHUB PAGE
     Plug 'scrooloose/nerdcommenter'         " Comment stuff out
-    Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' } "python support
     Plug 'iamcco/markdown-preview.vim'      " type MarkdownPreview to view md
     Plug 'chrisbra/csv.vim'
+    Plug 'dense-analysis/ale'
     
     "-----------------=== Git support ===-----------------------"
     Plug 'tpope/vim-fugitive'
@@ -96,6 +96,16 @@ set hlsearch                                " highlight search results
 set ignorecase
 set smartcase                               " if the search pattern contains upper letter, use it
 nnoremap <Leader> :noh<cr>                  " to disable hightlights
+
+"=============================================
+"" Ale settings (ALE)
+"=============================================
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+let g:ale_linters = {'python': ['flake8', 'pylint', 'pylsp', 'pyright']}
+let g:ale_fixers = {'python': ['black', 'isort']}
+let g:ale_python_black_options='--line-length=79'
+
 
 "=============================================
 "" Python settings (pymode)
