@@ -13,7 +13,10 @@ Install should be automatic for all plugins except YouCompleteMe. Run the follow
 `apt install build-essential cmake vim-nox python3-dev`
 `apt install mono-complete golang nodejs default-jdk npm`
 `cd ~/.vim/plugged/YouCompleteMe
-python3 install.py --all`
+python3 install.py --all`  
+
+For ALE, you need to install your linters/fixers in your environment. For us:
+`pip install pylint flake8 pyright black isort`
 
 # Commands
 ## Resolving git conflicts
