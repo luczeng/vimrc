@@ -105,52 +105,7 @@ let g:ale_fix_on_save = 1
 let g:ale_linters = {'python': ['flake8', 'pylint', 'pyright']}
 let g:ale_fixers = {'python': ['black', 'isort']}
 let g:ale_python_black_options='--line-length=79'
-
-
-"=============================================
-"" Python settings (pymode)
-"=============================================
-
-" Format
-let g:pymode_options_max_line_length = 120  " btw how does this interact with textwidth?
-
-" Linter
-let g:pymode_lint_unmodified = 0            " check code on every write (change if big files?)
-
-" Definitions
-" Rope
-let g:pymode_rope = 1
-let g:pymode_run_bind = '<leader>r'
-let g:pymode_rope_goto_definition_bind = '<leader>pg'
-let g:pymode_rope_goto_definition_cmd = 'new'
-let g:pymode_rope_organize_imports_bind = '<leader>pro'
-let g:pymode_rope_show_doc_bind = '<leader>pd'
-let g:pymode_rope_rename_bind = '<leader>prr'
-
-" Syntax and display info
-let g:pymode_syntax= 1                                              " Turn on pymode's syntax
-let g:pymode_syntax_slow_sync = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_print_as_function = 0
-let g:pymode_syntax_highlight_equal_operator = g:pymode_syntax_all
-let g:pymode_syntax_print_as_function=g:pymode_syntax_all
-let g:pymode_syntax_highlight_async_await=g:pymode_syntax_all
-let g:pymode_syntax_highlight_equal_operator=g:pymode_syntax_all
-let g:pymode_syntax_highlight_stars_operator=g:pymode_syntax_all
-let g:pymode_syntax_highlight_self=g:pymode_syntax_all
-let g:pymode_syntax_indent_errors=g:pymode_syntax_all               " Highlight indent errors
-let g:pymode_syntax_string_formatting=g:pymode_syntax_all
-let g:pymode_syntax_space_errors=g:pymode_syntax_all
-let g:pymode_syntax_string_format=g:pymode_syntax_all
-let g:pymode_syntax_string_templates=g:pymode_syntax_all
-let g:pymode_syntax_doctests=g:pymode_syntax_all
-let g:pymode_syntax_builtin_objs=g:pymode_syntax_all
-let g:pymode_syntax_builtin_types=g:pymode_syntax_all
-let g:pymode_syntax_highlight_exceptions=g:pymode_syntax_all
-let g:pymode_syntax_docstrings=g:pymode_syntax_all
-
-" Documentation
-let g:pymode_doc = 0
+:nnoremap gd :ALEGoToDefinition -vsplit 
 
 "============================================
 "" NERDTree settings
